@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+%input {
+  max-width: 355px;
+  width: 100%;
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid $input-border-color;
+  color: $input-txt-color;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: $input-bg-color;
+  padding: 20px;
+}

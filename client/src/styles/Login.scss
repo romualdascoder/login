@@ -1,0 +1,95 @@
+@use "abstracts" as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle farthest-side, #644367, #300f32);
+  background-repeat: no-repeat;
+  .formWrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 1rem;
+    min-height: 380px;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: 300px;
+      box-shadow: 0 4px 2px -3px #301a32;
+      .formHeader {
+        display: flex;
+        align-items: center;
+        width: inherit;
+        min-height: 64px;
+        background: rgb(106, 71, 108);
+        background: linear-gradient(
+          0deg,
+          rgba(106, 71, 108, 1) 32%,
+          rgba(118, 79, 121, 1) 83%
+        );
+        border: 0.5px solid #8b648e;
+        border-radius: 2px 2px 0px 0px;
+        p {
+          color: $main-txt-color;
+          padding-left: 22px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      .inputWrapper {
+        background-color: $input-wrapper-bg-color;
+        padding: 0px 22px 35px 22px;
+        min-height: 237px;
+        position: relative;
+        border-radius: 0px 0px 2px 2px;
+        .error {
+          color: $error;
+          font-size: 0.7rem;
+          position: absolute;
+          top: 4px;
+        }
+        .emailWrapper {
+          position: relative;
+          .userIcon {
+            fill: $input-icons-color;
+            position: absolute;
+            right: 19px;
+            top: 38px;
+            font-size: 1.2em;
+          }
+          .emailInput {
+            @extend %input;
+            margin: 23px 0px 20px 0px;
+          }
+        }
+        .pswWrappe {
+          position: relative;
+          .lockIcon {
+            fill: $input-icons-color;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 1.2em;
+          }
+          .pswInput {
+            @extend %input;
+            margin: 0px 0px 20px 0px;
+          }
+        }
+        .loginBtn {
+          @extend %btn;
+        }
+      }
+    }
+    .successMsg {
+      padding-top: 15px;
+      p {
+        font-size: 15px;
+        color: $main-txt-color;
+      }
+    }
+  }
+}

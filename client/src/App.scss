@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none !important;
+}
